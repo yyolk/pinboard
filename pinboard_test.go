@@ -2,12 +2,13 @@ package pinboard
 
 import (
 	"fmt"
+	"os"
 	"reflect"
 	"testing"
 )
 
 // A valid token is needed to make calls to the Pinboard API.
-var token = ""
+var token = os.Getenv("PINBOARD_API_KEY")
 
 func PrintStruct(s interface{}) {
 	structType := reflect.TypeOf(s)
